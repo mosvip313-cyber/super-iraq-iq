@@ -1,0 +1,11 @@
+services:
+  super-iraq-iq:
+    build:
+      context: ..
+      dockerfile: server/Dockerfile
+    container_name: super-iraq-iq
+    restart: unless-stopped
+    env_file:
+      - ../server/.env
+    ports:
+      - "8787:8787"
